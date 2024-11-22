@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precificador</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .input-single {
+            margin-bottom: 20px;
+        }
+
+        .input-single input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        #margem-container, #promo-container {
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PRECIFICADOR</h1>
+
+        <div class="input-single">
+            <label for="valor-venda">Preço de Venda (R$):</label>
+            <input type="number" id="valor-venda" placeholder="Digite o preço de venda">
+        </div>
+
+        <div class="input-single">
+            <label for="custo-produto">Custo do Produto (R$):</label>
+            <input type="number" id="custo-produto" placeholder="Digite o custo do produto">
+        </div>
+
+        <div class="input-group">
+            <div>
+                <label for="frete">Frete (R$):</label>
+                <input type="number" id="frete" placeholder="Frete">
+            </div>
+            <div>
+                <label for="imposto">Imposto (%):</label>
+                <input type="number" id="imposto" placeholder="Imposto">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div>
+                <label for="tarifa-venda">Tarifa de Venda (%):</label>
+                <input type="number" id="tarifa-venda" placeholder="Tarifa">
+            </div>
+            <div>
+                <label for="desconto-promo">Promoção (%):</label>
+                <input type="number" id="desconto-promo" placeholder="Promoção">
+            </div>
+        </div>
+
+        <div id="margem-container">
+            <p><strong>Margem de Contribuição:</strong> <span id="margem">R$ 0.00 (0%)</span></p>
+        </div>
+
+        <div id="promo-container" style="display: none;">
+            <p><strong>Preço com Promoção:</strong> <span id="valor-com-promo">R$ 0.00</span></p>
+            <p><strong>Margem de Contribuição com Promoção:</strong> <span id="margem-com-promo">R$ 0.00 (0%)</span></p>
+        </div>
+
+        <footer>
+            Desenvolvido por Lucas Belo Carvalho e Israel Silva Fonseca
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
