@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px; /* Aumentei o padding */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1000px; /* Aumentei a largura máxima */
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px; /* Aumentei o tamanho do título */
+    margin-bottom: 35px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Aumentei o espaço entre os campos */
+    margin-bottom: 30px; /* Aumentei o espaçamento entre as linhas */
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group label {
+    margin-bottom: 10px;
+    font-size: 18px; /* Aumentei o tamanho da fonte do label */
+    text-align: center;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 15px; /* Aumentei o padding do input */
+    font-size: 18px; /* Aumentei o tamanho da fonte do input */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.tarifa-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Aumentei o espaço entre os botões de opção */
+    margin-bottom: 20px;
+}
+
+.tarifa-selection label {
+    font-size: 18px; /* Aumentei o tamanho da fonte das opções */
+}
+
+.result {
+    text-align: center;
+    font-size: 22px; /* Aumentei o tamanho da fonte para os resultados */
+    margin: 15px 0;
+}
+
+.result .highlight {
+    font-size: 32px; /* Aumentei o tamanho da fonte do valor destacado */
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.negative {
+    color: #f44336; /* Vermelho para margem negativa */
+}
+
+.positive {
+    color: #4CAF50; /* Verde para margem positiva */
+}
+
+.highlight {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px; /* Aumentei o tamanho da fonte do rodapé */
+    color: #888;
+}

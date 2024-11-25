@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precificador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PRECIFICADOR</h1>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="valor-venda">Preço de Venda (R$):</label>
+                <input type="number" id="valor-venda" placeholder="Digite o preço de venda">
+            </div>
+            <div class="input-group">
+                <label for="custo-produto">Custo do Produto (R$):</label>
+                <input type="number" id="custo-produto" placeholder="Digite o custo do produto">
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="frete">Frete (R$):</label>
+                <input type="number" id="frete" placeholder="Digite o frete">
+            </div>
+            <div class="input-group">
+                <label for="imposto">Imposto (%):</label>
+                <input type="number" id="imposto" placeholder="Digite o imposto">
+            </div>
+        </div>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+            <label for="tarifa-venda">Tarifa de Venda:</label>
+            <input type="number" id="tarifa-venda" placeholder="Digite a tarifa">
+            <div class="tarifa-selection">
+                <label>
+                    <input type="radio" name="tarifa-type" id="percent" checked> Porcentagem
+                </label>
+                <label>
+                    <input type="radio" name="tarifa-type" id="valor"> Valor R$
+                </label>
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-group">
+                <label for="desconto-promo">Promoção (%):</label>
+                <input type="number" id="desconto-promo" placeholder="Digite a promoção">
+            </div>
+        </div>
+
+        <div id="margem-container" class="result">
+            <p>Margem de Contribuição:</p>
+            <p class="highlight" id="margem">R$ 0.00 (0%)</p>
+        </div>
+
+        <div id="promo-container" class="result" style="display: none;">
+            <p>Preço com Promoção:</p>
+            <p><span id="valor-com-promo">R$ 0.00</span></p><br>
+            <p>Margem de Contribuição com Promoção:</p>
+            <p class="highlight" id="margem-com-promo">R$ 0.00 (0%)</p>
+        </div>
+
+        <footer>
+            Desenvolvido por Lucas Belo Carvalho e Israel Silva Fonseca
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
