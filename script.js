@@ -30,7 +30,7 @@ function calcularMargem() {
 
     // Aplica a cor dependendo da margem
     margemEl.textContent = `R$ ${margem.toFixed(2)} (${margemPercentual.toFixed(2)}%)`;
-    margemEl.className = margem < 0 ? 'highlight negative' : 'highlight positive'; // Alterei para aplicar a cor correta
+    margemEl.className = margem < 0 ? 'highlight negative' : 'highlight positive'; 
 
     if (promo > 0) {
         const valorComPromo = valorVenda * (1 - promo / 100);
@@ -40,7 +40,7 @@ function calcularMargem() {
         promoContainer.style.display = 'block';
         valorComPromoEl.textContent = `R$ ${valorComPromo.toFixed(2)}`;
         margemComPromoEl.textContent = `R$ ${margemComPromo.toFixed(2)} (${margemComPromoPercentual.toFixed(2)}%)`;
-        margemComPromoEl.className = margemComPromo < 0 ? 'highlight negative' : 'highlight positive'; // Alterei para aplicar a cor correta
+        margemComPromoEl.className = margemComPromo < 0 ? 'highlight negative' : 'highlight positive';
     } else {
         promoContainer.style.display = 'none';
     }
