@@ -14,6 +14,7 @@ const margemComPromoEl = document.getElementById('margem-com-promo');
 const percentRadio = document.getElementById('percent');
 const valorRadio = document.getElementById('valor');
 
+// Função para calcular a margem
 function calcularMargem() {
     const valorVenda = parseFloat(valorVendaInput.value) || 0;
     const custoProduto = parseFloat(custoProdutoInput.value) || 0;
